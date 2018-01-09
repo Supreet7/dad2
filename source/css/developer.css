@@ -1,0 +1,35 @@
+body {
+  background: white !important;
+}
+
+form {
+  padding: 0 !important;
+  margin: 0 0 1rem !important;
+}
+
+.site-header{
+    position: fixed !important;
+    z-index: 999 !important;
+    top: 0px !important;
+    background-color: #990000 !important;
+    width: 100% !important;
+  }
+
+.content {
+    -webkit-transform: translateZ(0);
+    position: relative !important;
+    z-index: 30 !important;
+    margin-top: 82px !important;
+}
+
+.content ul  {
+    list-style-type:square !important;
+}
+.content1 h1, h2, h3, h4 {
+  padding-top: 90px;
+}
+
+.guide_note, .guide_note p {
+		margin-left: 1.5rem !important;
+    width:45%;
+}

@@ -54,7 +54,7 @@ html, body {
   overflow-x: hidden;
   position: fixed;
   z-index: 30;
-  top: 0;
+  top: 82px;
   left: 0;
   bottom: 0;
   width: $nav-width;
@@ -176,6 +176,16 @@ html, body {
     padding-left: $nav-padding + $nav-indent;
     font-size: 12px;
   }
+
+  .toc-list-h3 {
+    display: none;
+    background-color: $nav-subitem-bg;
+  }
+
+  .toc-h3 {
+    padding-left: $nav-padding + $nav-padding + $nav-indent;
+    font-size: 12px;
+   }
 
   .toc-footer {
     padding: 1em 0;
@@ -343,8 +353,11 @@ html, body {
   }
 
   // the div is the tocify hidden div for placeholding stuff
-  &>h1, &>h2, &>div {
-    clear:both;
+  & > h1,
+  & > h2,
+  & > h3,
+  & > div {
+    clear: both;
   }
 
   h1 {

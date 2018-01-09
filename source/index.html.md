@@ -8,232 +8,75 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  - <a href='https://devtools.dol.gov/developer'>DOL Public API</a>
 
 includes:
+  - ExploreOurData
   - errors
 
 search: true
 ---
+# User's Guide
+To use the API you must register at [https://devtools.dol.gov/developer](https://devtools.dol.gov/developer) and request an API key for each application that will access the API. Registration and API keys are free.
 
-# Introduction
+## Registration process
+* Visit [https://devtools.dol.gov/developer](https://devtools.dol.gov/developer)
+* Click the Register here.
+* Fill in the registration form and submit it.
+* A confirmation email will be sent to the address you provided during registration.
+* Click on the link in the email to activate your developer account.
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
-
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
-
-# Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
+## API Key (Token) Creation Process
+* Visit [https://devtools.dol.gov/developer](https://devtools.dol.gov/developer)
+* Go to the login page and enter your username and password
+* Click on the My Tokens link
+* Click "Create New Token"
+* Provide a Shared Secret, Application Name, and a Description
+* The token value will be auto-generated and added to your tokens list.
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+<strong>Note:</strong> Once the API key (token) is generated, it takes some time to activate (~few hours).
 </aside>
 
-# Kittens
+## How to Access API (V1)
+The API is exposed as an [http://www.odata.org/](OData producer), with the addition of request authorizations. We are providing SDK's for some platforms that abstract the OData and request signing process and provides you with an easy to use method call. Please visit the [http://developer.dol.gov/sdk/](SDKs Page) to learn more about the DOL Data SDKs.
 
-## Get All Kittens
+<strong>Example:</strong> Assume that you want to read data from the agencies table found in the dataset named DOLAgency. The request URL is:
+<div class="guide_note">
+  http://api.dol.gov/V1/DOLAgency/Agencies
+</div>
 
-```ruby
-require 'kittn'
+Your API Key (Token) is d9c6c290-da4c-424e-a378-fb4bd027b58z
+<div class="guide_note">
+  <strong>note:</strong> This token is only an example. It is not usable.
+</div>
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
+Your direct link to Agency data using the input above is:
+<div class="guide_note">
+  http://api.dol.gov/V1/DOLAgency/Agencies/?KEY=d9c6c290-da4c-424e-a378-fb4bd027b58z
+</div>
 
-```python
-import kittn
+### Result Format
+By default, the DOL   (V1) (api.dol.gov) API's responses are in XML format. To receive the data in JSON, send an "Accept" header with "application/json."
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+##How to Access API (V2)
+The API is exposed as a RESTful interface. We require you to authenticate by placing your token in the header. We are providing SDK's for some platforms in order to provide you with an easy to use method call. Please visit the SDKs Page to learn more about the DOL Data SDKs.
 
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
+<strong>Example:</strong> Assume that you want to read data from the incidents table found in the OSHA Enforcement dataset. The request URL is:
+<div class="guide_note">
+https://data.dol.gov/get/inspection
+</div>
 
-```javascript
-const kittn = require('kittn');
+Your API Key (Token) is d9c6c290-da4c-424e-a378-fb4bd027b58z
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
+Your authentication header would contain the key/value of:
+<div class="guide_note">
+X-API-KEY: d9c6c290-da4c-424e-a378-fb4bd027b58z
+</div>
 
-> The above command returns JSON structured like this:
+**Result Format**
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
-
+Data.dol.gov sends responses by default in JSON format. To customize the return format, simply add /format/xml or /format/json to the request URL. For example:
+<div class="guide_note">
+https://data.dol.gov/get/inspection/format/xml
+</div>
