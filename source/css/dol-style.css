@@ -42,15 +42,12 @@ input[type="search"] {
 	padding: 6px 0;
 }
 h1.header-logo-type {
-	color: white !important;
-	float: left!important;
-	/*	font-size: 26px; */
-	font-size: 20px !important;
-	line-height:28px!important;
-	font-weight: 300!important;
-	/*	font-weight: bold; */
-	margin-top: 5px!important;
-	margin-bottom: 5px!important;/*This font is new.  Originally there was no fant-family in this section
+    color: white !important;
+    font-size: 12px !important;
+    line-height: 20px!important;
+    font-weight: 300!important;
+    margin-top: 15px!important;
+    margin-bottom: 5px!important;/*This font is new.  Originally there was no fant-family in this section
 	font-family:"MS Serif", "New York", serif;*/
 }
 .header-logo-type-white {
@@ -99,7 +96,7 @@ h1.header-logo-type {
 	height: 70px;
 	text-indent: -9999em;
 	width: 70px;
-	margin: 0 5px 0 0;
+	margin: -7px 5px 0 5px;
 }
 /* section's header  */
 .hp h1 {
@@ -428,44 +425,17 @@ ul.bulleted-list li {
  .slide-caption {
  padding: 10px 5px 0 5px;
 }
-h1.header-logo-type {
- font-size: 16px!important;
- line-height:20px!important;
- margin-top: 10px!important;
-}
 .header-logo-type-white {
   font-size: 18px!important;
 	line-height:20px!important;
 	margin-top: 15px!important;
 }
-.brand {
- background: url("../img/logo-m.png") no-repeat;
- cursor: pointer;
- float: left;
- height: 60px;
- text-indent: -9999em;
- width: 60px;
- margin: 0 5px 0 0;
-}
+
 .footer-info1 {
  padding-top: 25px;
 }
 }
  @media (min-width: 481px) and (max-width: 760px) {
-h1.header-logo-type {
- font-size: 14px!important;
- line-height:16px!important;
- margin-top: 10px!important;
-}
- .brand {
- background: url("../img/logo-s.png") no-repeat;
- cursor: pointer;
- float: left;
- height: 50px;
- text-indent: -9999em;
- width: 50px;
- margin: 0 5px 0 10px;
-}
 .header-logo-type-white {
   font-size: 14px!important;
 }
@@ -510,58 +480,29 @@ and (orientation : portrait) {
 
 /*Landscape phones and down*/
 @media (max-width: 480px) {
-
-h1.header-logo-type {
-    font-size: 18px!important;
-    line-height: 20px!important;
-    margin-top: 4px!important;
-}
- 
-.brand {
- background: url("../img/logo-s.png") no-repeat;
- cursor: pointer;
- float: left;
- height: 50px;
- text-indent: -9999em;
- width: 50px;
- margin: 0 5px 0 0;
-}
-
 .hp h2 {
  font-size: 100% !important;
  border-top: solid 3px #000;
  margin-top: 20px;
 }
-
 .slide-caption {
  padding: 10px 10px 0 10px;
 }
-
 .slide-caption h3 {
  font-size: 20px;
  line-height: 22px;
 }
-
 .slide-caption p {
  font-size: 14px;
  line-height: 16px;
  	margin-bottom: 15px;
 }
-
 .slider-line {
  border-bottom: solid 1px #ccc;
 }
 .line-b-peach {
  border-bottom: solid 1px #ae3f3c; /*#ae3f3c;*/
  margin-bottom: 10px;
-}
-.brand {
- background: url("../img/logo-s.png") no-repeat;
- cursor: pointer;
- float: left;
- text-indent: -9999em;
- width: 50px;
- margin: 0 5px 0 0;
 }
 ul.list-xgap {
  margin-top: 0px !important;

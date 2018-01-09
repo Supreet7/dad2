@@ -54,7 +54,7 @@ html, body {
   overflow-x: hidden;
   position: fixed;
   z-index: 30;
-  top: 82px;
+  top: 0;
   left: 0;
   bottom: 0;
   width: $nav-width;
@@ -86,6 +86,7 @@ html, body {
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
+      box-shadow: none;
       margin: $nav-v-padding $nav-padding;
       width: $nav-width - 30;
       outline: none;
@@ -95,9 +96,9 @@ html, body {
 
     &:before {
       position: absolute;
-      top: 17px;
-      left: $nav-padding;
-      color: $nav-text;
+      top: 12px;
+      left: 20px;
+      color: #666;
       @extend %icon-search;
     }
   }
@@ -233,7 +234,7 @@ html, body {
     transform: rotate(-90deg) translate(-100%, 0);
     border-radius: 0 0 0 5px;
   }
-  padding: 0 1.5em 5em 0; // increase touch size area
+  padding: 1em 1.5em 5em 0; // increase touch size area
   display: none;
   position: fixed;
   top: 0;
