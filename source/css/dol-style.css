@@ -510,12 +510,14 @@ and (orientation : portrait) {
 
 /*Landscape phones and down*/
 @media (max-width: 480px) {
+
 h1.header-logo-type {
     font-size: 18px!important;
     line-height: 20px!important;
     margin-top: 4px!important;
 }
- .brand {
+ 
+.brand {
  background: url("../img/logo-s.png") no-repeat;
  cursor: pointer;
  float: left;
@@ -524,23 +526,28 @@ h1.header-logo-type {
  width: 50px;
  margin: 0 5px 0 0;
 }
+
 .hp h2 {
  font-size: 100% !important;
  border-top: solid 3px #000;
  margin-top: 20px;
 }
+
 .slide-caption {
  padding: 10px 10px 0 10px;
 }
+
 .slide-caption h3 {
  font-size: 20px;
  line-height: 22px;
 }
+
 .slide-caption p {
  font-size: 14px;
  line-height: 16px;
  	margin-bottom: 15px;
 }
+
 .slider-line {
  border-bottom: solid 1px #ccc;
 }
