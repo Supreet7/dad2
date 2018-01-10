@@ -234,7 +234,7 @@
 
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;]">
     <a href="#" id="nav-button">
       <span>
         <img src="images/navbar.png" alt="Navbar" />
@@ -251,8 +251,6 @@
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -260,7 +258,7 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#user-39-s-guide" class="toc-h1 toc-link" data-title="User's Guide">User's Guide</a>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#registration-process" class="toc-h2 toc-link" data-title="Registration process">Registration process</a>
@@ -269,65 +267,68 @@
                     <a href="#api-key-token-creation-process" class="toc-h2 toc-link" data-title="API Key (Token) Creation Process">API Key (Token) Creation Process</a>
                   </li>
                   <li>
-                    <a href="#how-to-access-api-v1" class="toc-h2 toc-link" data-title="How to Access API (V1)">How to Access API (V1)</a>
+                    <a href="#how-to-access-api" class="toc-h2 toc-link" data-title="How to Access API">How to Access API</a>
                       <ul class="toc-list-h3">
                           <li>
-                            <a href="#result-format" class="toc-h3 toc-link" data-title="User's Guide">Result Format</a>
+                            <a href="#result-format" class="toc-h3 toc-link" data-title="Authentication">Result Format</a>
                           </li>
                       </ul>
-                  </li>
-                  <li>
-                    <a href="#how-to-access-api-v2" class="toc-h2 toc-link" data-title="How to Access API (V2)">How to Access API (V2)</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#explore-our-data" class="toc-h1 toc-link" data-title="Explore Our Data">Explore Our Data</a>
+            <a href="#error-message" class="toc-h1 toc-link" data-title="Error Message">Error Message</a>
+          </li>
+          <li>
+            <a href="#rate-limit" class="toc-h1 toc-link" data-title="Rate Limit">Rate Limit</a>
+          </li>
+          <li>
+            <a href="#api" class="toc-h1 toc-link" data-title="API">API</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#health-amp-safety" class="toc-h2 toc-link" data-title="Health &amp; Safety">Health &amp; Safety</a>
                       <ul class="toc-list-h3">
                           <li>
-                            <a href="#injuries-and-illness-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Injuries And Illness  (V1)</a>
+                            <a href="#injuries-and-illness-api" class="toc-h3 toc-link" data-title="API">Injuries And Illness API</a>
                           </li>
                           <li>
-                            <a href="#gulf-oil-spill-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Gulf Oil Spill  (V1)</a>
+                            <a href="#gulf-oil-spill-api" class="toc-h3 toc-link" data-title="API">Gulf Oil Spill API</a>
                           </li>
                           <li>
-                            <a href="#dol-osha-compliance-v1" class="toc-h3 toc-link" data-title="Explore Our Data">DOL OSHA Compliance  (V1)</a>
+                            <a href="#dol-osha-compliance-api" class="toc-h3 toc-link" data-title="API">DOL OSHA Compliance API</a>
                           </li>
                           <li>
-                            <a href="#msha-employment-production-v1" class="toc-h3 toc-link" data-title="Explore Our Data">MSHA Employment Production  (V1)</a>
+                            <a href="#msha-employment-production-api" class="toc-h3 toc-link" data-title="API">MSHA Employment Production API</a>
                           </li>
                           <li>
-                            <a href="#mine-violation-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Mine Violation  (V1)</a>
+                            <a href="#mine-violation-api" class="toc-h3 toc-link" data-title="API">Mine Violation API</a>
                           </li>
                           <li>
-                            <a href="#fatal-occupational-injuries-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Fatal Occupational Injuries  (V1)</a>
+                            <a href="#fatal-occupational-injuries-api" class="toc-h3 toc-link" data-title="API">Fatal Occupational Injuries API</a>
                           </li>
                           <li>
-                            <a href="#dol-osha-enforcement-v2" class="toc-h3 toc-link" data-title="Explore Our Data">DOL OSHA Enforcement  (V2)</a>
+                            <a href="#dol-osha-enforcement-api" class="toc-h3 toc-link" data-title="API">DOL OSHA Enforcement API</a>
                           </li>
                           <li>
-                            <a href="#auto-workers-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Auto Workers  (V1)</a>
+                            <a href="#auto-workers-api" class="toc-h3 toc-link" data-title="API">Auto Workers API</a>
                           </li>
                           <li>
-                            <a href="#safety-and-health-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Safety and Health  (V1)</a>
+                            <a href="#safety-and-health-api" class="toc-h3 toc-link" data-title="API">Safety and Health API</a>
                           </li>
                           <li>
-                            <a href="#full-mine-information-mines-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Full Mine Information Mines  (V1)</a>
+                            <a href="#full-mine-information-mines-api" class="toc-h3 toc-link" data-title="API">Full Mine Information Mines API</a>
                           </li>
                           <li>
-                            <a href="#basic-mine-information-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Basic Mine Information  (V1)</a>
+                            <a href="#basic-mine-information-api" class="toc-h3 toc-link" data-title="API">Basic Mine Information API</a>
                           </li>
                           <li>
-                            <a href="#mine-accident-injuries-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Mine Accident Injuries  (V1)</a>
+                            <a href="#mine-accident-injuries-api" class="toc-h3 toc-link" data-title="API">Mine Accident Injuries API</a>
                           </li>
                           <li>
-                            <a href="#osha-compliance-v1" class="toc-h3 toc-link" data-title="Explore Our Data">OSHA Compliance  (V1)</a>
+                            <a href="#osha-compliance-api" class="toc-h3 toc-link" data-title="API">OSHA Compliance API</a>
                           </li>
                           <li>
-                            <a href="#mine-inspections-v1" class="toc-h3 toc-link" data-title="Explore Our Data">Mine Inspections  (V1)</a>
+                            <a href="#mine-inspections-api" class="toc-h3 toc-link" data-title="API">Mine Inspections API</a>
                           </li>
                       </ul>
                   </li>
@@ -343,7 +344,13 @@
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#example" class="toc-h1 toc-link" data-title="Example">Example</a>
+          </li>
+          <li>
+            <a href="#support" class="toc-h1 toc-link" data-title="Support">Support</a>
+          </li>
+          <li>
+            <a href="#api-notifications" class="toc-h1 toc-link" data-title="API Notifications">API Notifications</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -353,7 +360,7 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='user-39-s-guide'>User&#39;s Guide</h1>
+        <h1 id='authentication'>Authentication</h1>
 <p>To use the API you must register at <a href="https://devtools.dol.gov/developer">https://devtools.dol.gov/developer</a> and request an API key for each application that will access the API. Registration and API keys are free.</p>
 <h2 id='registration-process'>Registration process</h2>
 <ul>
@@ -376,7 +383,7 @@
 <aside class="notice">
 <strong>Note:</strong> Once the API key (token) is generated, it takes some time to activate (~few hours).
 </aside>
-<h2 id='how-to-access-api-v1'>How to Access API (V1)</h2>
+<h2 id='how-to-access-api'>How to Access API</h2>
 <p>The API is exposed as an <a href="OData%20producer">http://www.odata.org/</a>, with the addition of request authorizations. We are providing SDK&#39;s for some platforms that abstract the OData and request signing process and provides you with an easy to use method call. Please visit the <a href="SDKs%20Page">http://developer.dol.gov/sdk/</a> to learn more about the DOL Data SDKs.</p>
 
 <p><strong>Example:</strong> Assume that you want to read data from the agencies table found in the dataset named DOLAgency. The request URL is:
@@ -395,13 +402,6 @@
 </div></p>
 <h3 id='result-format'>Result Format</h3>
 <p>By default, the DOL   (V1) (api.dol.gov) API&#39;s responses are in XML format. To receive the data in JSON, send an &quot;Accept&quot; header with &quot;application/json.&quot;</p>
-<h2 id='how-to-access-api-v2'>How to Access API (V2)</h2>
-<p>The API is exposed as a RESTful interface. We require you to authenticate by placing your token in the header. We are providing SDK&#39;s for some platforms in order to provide you with an easy to use method call. Please visit the SDKs Page to learn more about the DOL Data SDKs.</p>
-
-<p><strong>Example:</strong> Assume that you want to read data from the incidents table found in the OSHA Enforcement dataset. The request URL is:
-<div class="guide_note">
-https://data.dol.gov/get/inspection
-</div></p>
 
 <p>Your API Key (Token) is d9c6c290-da4c-424e-a378-fb4bd027b58z</p>
 
@@ -416,123 +416,7 @@ X-API-KEY: d9c6c290-da4c-424e-a378-fb4bd027b58z
 <div class="guide_note">
 https://data.dol.gov/get/inspection/format/xml
 </div></p>
-<h1 id='explore-our-data'>Explore Our Data</h1><h2 id='health-amp-safety'>Health &amp; Safety</h2><h3 id='injuries-and-illness-v1'>Injuries And Illness  (V1)</h3>
-<p>http://api.dol.gov/V1/Safety/InjuriesAndIllness</p>
-
-<p>The Injuries, Illnesses, and Fatalities (IIF) program provides annual information on the rate and number of work related injuries, illnesses, and fatal injuries, and how these statistics vary by incident, industry, geography, occupation, and other characteristics. More information and details about the data provided can be found at http://www.bls.gov/data/#injuries.</p>
-<h3 id='gulf-oil-spill-v1'>Gulf Oil Spill  (V1)</h3>
-<p>http://api.dol.gov/V1/Safety/GulfOilSpill</p>
-
-<p>Following its sampling plan, OSHA industrial hygienists are monitoring workers engaged in the oil spill clean up in the Gulf of Mexico for exposure to hazardous chemicals and conditions. These data tables provide sample results for chemicals, noise, and heat stress index measurements. Samples to assess airborne concentrations of oil, weathered oil, oil dispersants, cleaning agents and other materials as identified are taken. When evaluating worker exposure, direct reading instruments and shift-long sampling is performed in the actual breathing zone of workers. OSHA has also sampled areas that are periodically frequented by workers but the samples are not taken from the breathing zone of workers. Finally, OSHA has sampled directly over tar balls, inside bags containing contaminated materials, and other locations that do not represent worker exposure but provide information on the types of chemicals that may be coming off contaminated materials.</p>
-<h3 id='dol-osha-compliance-v1'>DOL OSHA Compliance  (V1)</h3>
-<p>http://api.dol.gov/V1/Safety/Fatalities</p>
-
-<p>This dataset provides summaries of fatalities and catastrophes resulting in the hospitalization of three or more workers. Employers must report these incidents to OSHA within eight hours. The summaries include only preliminary information, as reported to OSHA Area Offices or to States which operate OSHA-approved State Plans. OSHA investigates all work-related fatalities and catastrophes. Once an OSHA investigation is complete, the summary report will be updated with a webpage link to the corresponding inspection, which will list citation information. More information can be found at http://www.osha.gov/dep/fatcat/dep_fatcat.html</p>
-<h3 id='msha-employment-production-v1'>MSHA Employment Production  (V1)</h3>
-<p>http://api.dol.gov/V1/Employment</p>
-
-<p>This dataset contains the annual summation of employee hours and coal production reported by mine operators where the average quarterly employment is greater than zero with grouping by calendar year, subunit code and mine ID beginning with 1983. The subunit code identifies the location or operation of the mine relating to the: (01) Underground; (02) Surface at underground; (03) Strip, quarry, open pit; (04) Auger; (05) Culm bank/refuse pile; (06) Dredge; (12) Other mining; (17) Independent shops or yards; (30) Mill operation/preparation plant; (99) Office workers at mine site.</p>
-<h3 id='mine-violation-v1'>Mine Violation  (V1)</h3>
-<p>http://api.dol.gov/V1/Mining/Violation</p>
-
-<p>This dataset contains violations issued from 1/1/1978 to 1/1/2000 as a result of MSHA inspections. Each inspection results in a unique Event Number that can be associated with many violations and is a direct link to the Inspections Data Set. The violator name at the time of the violation, the actual date the violation occurred and the date the violation was issued are in this file. This table contains details about the specific citation/order/safeguard issued, such as Section of the Act, relevant dates and the conditions or practices which caused and constituted a violation or an imminent danger. The data is captured from (MSHA form 7000-3).</p>
-<h3 id='fatal-occupational-injuries-v1'>Fatal Occupational Injuries  (V1)</h3>
-<p>http://api.dol.gov/V1/Safety/FatalOccupationalInjuries</p>
-
-<p>Allows users to search nonfatal and fatal data for the nation and for States from the most current Survey of Occupational Injuries and Illnesses and the Census of Fatal Occupational Injuries programs. Users can search by industry, demographic characteristics, and case characteristics. Historical data for years prior to the current year. More information and details about the data provided can be found at http://www.bls.gov/data/#injuries.</p>
-<h3 id='dol-osha-enforcement-v2'>DOL OSHA Enforcement  (V2)</h3>
-<p>The dataset consists of inspection case detail for approximately 90,000 OSHA inspections conducted annually. The dataset includes information regarding the impetus for conducting the inspection, and details on citations and penalty assessments resulting from violations of OSHA standards. Additionally, accident investigation information is provided, including textual descriptions of the accident, and details regarding the injuries and fatalities which occurred. For more information refer to: www.osha.gov.</p>
-
-<p>View OSHA&#39;s metric codes on the &#39;Data Enforcement&#39; page under &#39;OSHA Enforcement Data&#39; or Downloaded.</p>
-
-<p>The following datasets use offset for pagination so you can gather more than the limit of 200 records. For more detailed information read about the how to use our offset under the &quot;data.dol.gov&quot; tab.</p>
-<h3 id='auto-workers-v1'>Auto Workers  (V1)</h3>
-<p>http://api.dol.gov/V1/AutoWorkers</p>
-
-<p>This dataset tells you Auto Companies which are closed or repurposed in the last couple of decades. It also shows you how successful or bad the closure process or the repurpose process is and in which state and city these companies found.</p>
-<h3 id='safety-and-health-v1'>Safety and Health  (V1)</h3>
-<p>http://api.dol.gov/V1/SafetyHealth</p>
-
-<p>Data related to safety and health in the workplace.</p>
-<h3 id='full-mine-information-mines-v1'>Full Mine Information Mines  (V1)</h3>
-<p>http://api.dol.gov/V1/Mining/FullMineInfo/</p>
-
-<p>The Full Mine Info dataset lists all Coal and Metal/Non-Metal mines under MSHA&#39;s jurisdiction since 1/1/1970. It includes such information as the current status of each mine (Active, Abandoned, NonProducing, etc.), the current owner and operating company, commodity codes and physical attributes of the mine. Mine ID is the unique key for this data.</p>
-<h3 id='basic-mine-information-v1'>Basic Mine Information  (V1)</h3>
-<p>http://api.dol.gov/V1/Mining/BasicMineInfo</p>
-
-<p>The Basic Mine Info dataset lists basic information on all Coal and Metal/Non-Metal mines under MSHA&#39;s jurisdiction since 1/1/1970. It includes such information as the current status of each mine (Active, Abandoned, NonProducing, etc.), the current owner and operating company, commodity codes and physical attributes of the mine.</p>
-
-<p>Note: This dataset used to be &quot;Address of record&quot;. The name was changed due to content organization so did the location.</p>
-
-<p>This complete dataset can be found at https://catalog.data.gov/dataset/basic-mine-information-mine-address-of-record</p>
-<h3 id='mine-accident-injuries-v1'>Mine Accident Injuries  (V1)</h3>
-<p>http://api.dol.gov/V1/Safety/Accidents</p>
-
-<p>This dataset contains information on all accidents, injuries and illnesses reported by mine operators and contractors beginning with 1983. The data in the table is obtained from the Mine Accident, Injury and Illness Report form (MSHA Form 7000-1). Document number is the unique key for this data. It provides information about the accident/injury/illness such as type, mine location, lost days and the degree of injury.</p>
-
-<p>This complete dataset can be found at https://catalog.data.gov/dataset/mine-accident-injuries</p>
-<h3 id='osha-compliance-v1'>OSHA Compliance  (V1)</h3>
-<p>http://api.dol.gov/V1/Compliance/OSHA</p>
-
-<p>The dataset consists of inspection case detail for approximately 100,000 OSHA inspections conducted annually. The dataset includes information regarding the impetus for conducting the inspection, and details on citations and penalty assessments resulting from violations of OSHA standards.More information and details about the data provided can be found at http://www.osha.gov</p>
-
-<p>This complete dataset can be found on the DOL Data Enforcement application at http://enforcedata.dol.gov</p>
-<h3 id='mine-inspections-v1'>Mine Inspections  (V1)</h3>
-<p>http://api.dol.gov/V1/Compliance/MineInspection</p>
-
-<p>The Mine Inspections dataset lists every mine inspection conducted by MSHA dating back to 1/1/1978. The data includes the name of the mine inspected, MSHA&#39;s internal inspection number (event number), the type of inspection and the start and end dates of the inspection. Event Number is the unique key for this dataset. It also includes the Mine ID associated with the inspections which can be used to relate it to the Mines Data Set.</p>
-
-<p>This complete dataset can be found at https://explore.data.gov/Energy-and-Utilities/Mine-Inspections/wt25-mkey</p>
-<h2 id='wage-amp-hours'>Wage &amp; hours</h2>
-<p>Farm Labor Contractor and Farm Labor Contractor Employee  (V2)</p>
-
-<p>Wage and Hour Publications System  (V2)</p>
-
-<p>WHD Compliance  (V1)</p>
-<h2 id='expanding-growth-br-opportunities-amp-learning'>Expanding Growth<br>Opportunities &amp; Learning</h2>
-<p>Public Workforce System  (V1)</p>
-
-<p>OUI Initial Claims  (V1)</p>
-
-<p>IPIA  (V1)</p>
-
-<p>Quarterly Census Employment and Wage (CEW)  (V1)</p>
-
-<p>Occupational Employment Statistics Survey (OES)  (V1)</p>
-
-<p>Current Population Survey (CPS)  (V1)</p>
-
-<p>Current Employment Statistics (CES)  (V1)</p>
-
-<p>Consumer Price Indexes (CPI)  (V1)</p>
-
-<p>2010 Workforce Investment Act  (V1)</p>
-
-<p>2010 Occupational Employment Statistics  (V1)</p>
-
-<p>BLS Numbers  (V1)</p>
-<h2 id='other-datasets'>Other Datasets</h2>
-<p>Sweat &amp; Toil  (V2)</p>
-
-<p>VETS4212  (V2)</p>
-
-<p>VETS100  (V1)</p>
-
-<p>API Metrics (per key)  (V1)</p>
-
-<p>Research And Evaluation Inventory  (V1)</p>
-
-<p>Geography  (V1)</p>
-
-<p>Form  (V1)</p>
-
-<p>Frequently Asked Questions (FAQ)  (V1)</p>
-
-<p>API Metadata  (V1)</p>
-
-<p>Agency  (V1)</p>
-<h1 id='errors'>Errors</h1>
+<h1 id='error-message'>Error Message</h1>
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
 
 <p>The DOL API uses the following error codes:</p>
@@ -588,14 +472,139 @@ https://data.dol.gov/get/inspection/format/xml
 <td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
+<h1 id='rate-limit'>Rate Limit</h1><h1 id='api'>API</h1><h2 id='health-amp-safety'>Health &amp; Safety</h2><h3 id='injuries-and-illness-api'>Injuries And Illness API</h3>
+<p>http://api.dol.gov/V1/Safety/InjuriesAndIllness</p>
 
+<p>The Injuries, Illnesses, and Fatalities (IIF) program provides annual information on the rate and number of work related injuries, illnesses, and fatal injuries, and how these statistics vary by incident, industry, geography, occupation, and other characteristics. More information and details about the data provided can be found at http://www.bls.gov/data/#injuries.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.dol.gov/V1/Safety/InjuriesAndIllness/?KEY=YOUR_API_KEY"</span> -H <span class="s2">"Accept: application/json"</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"d"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"EntitySets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"II_AREA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"II_CASE_TYPE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"II_DATA_PUB"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"II_DATA_TYPE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='gulf-oil-spill-api'>Gulf Oil Spill API</h3>
+<p>http://api.dol.gov/V1/Safety/GulfOilSpill</p>
+
+<p>Following its sampling plan, OSHA industrial hygienists are monitoring workers engaged in the oil spill clean up in the Gulf of Mexico for exposure to hazardous chemicals and conditions. These data tables provide sample results for chemicals, noise, and heat stress index measurements. Samples to assess airborne concentrations of oil, weathered oil, oil dispersants, cleaning agents and other materials as identified are taken. When evaluating worker exposure, direct reading instruments and shift-long sampling is performed in the actual breathing zone of workers. OSHA has also sampled areas that are periodically frequented by workers but the samples are not taken from the breathing zone of workers. Finally, OSHA has sampled directly over tar balls, inside bags containing contaminated materials, and other locations that do not represent worker exposure but provide information on the types of chemicals that may be coming off contaminated materials.</p>
+<h3 id='dol-osha-compliance-api'>DOL OSHA Compliance API</h3>
+<p>http://api.dol.gov/V1/Safety/Fatalities</p>
+
+<p>This dataset provides summaries of fatalities and catastrophes resulting in the hospitalization of three or more workers. Employers must report these incidents to OSHA within eight hours. The summaries include only preliminary information, as reported to OSHA Area Offices or to States which operate OSHA-approved State Plans. OSHA investigates all work-related fatalities and catastrophes. Once an OSHA investigation is complete, the summary report will be updated with a webpage link to the corresponding inspection, which will list citation information. More information can be found at http://www.osha.gov/dep/fatcat/dep_fatcat.html</p>
+<h3 id='msha-employment-production-api'>MSHA Employment Production API</h3>
+<p>http://api.dol.gov/V1/Employment</p>
+
+<p>This dataset contains the annual summation of employee hours and coal production reported by mine operators where the average quarterly employment is greater than zero with grouping by calendar year, subunit code and mine ID beginning with 1983. The subunit code identifies the location or operation of the mine relating to the: (01) Underground; (02) Surface at underground; (03) Strip, quarry, open pit; (04) Auger; (05) Culm bank/refuse pile; (06) Dredge; (12) Other mining; (17) Independent shops or yards; (30) Mill operation/preparation plant; (99) Office workers at mine site.</p>
+<h3 id='mine-violation-api'>Mine Violation API</h3>
+<p>http://api.dol.gov/V1/Mining/Violation</p>
+
+<p>This dataset contains violations issued from 1/1/1978 to 1/1/2000 as a result of MSHA inspections. Each inspection results in a unique Event Number that can be associated with many violations and is a direct link to the Inspections Data Set. The violator name at the time of the violation, the actual date the violation occurred and the date the violation was issued are in this file. This table contains details about the specific citation/order/safeguard issued, such as Section of the Act, relevant dates and the conditions or practices which caused and constituted a violation or an imminent danger. The data is captured from (MSHA form 7000-3).</p>
+<h3 id='fatal-occupational-injuries-api'>Fatal Occupational Injuries API</h3>
+<p>http://api.dol.gov/V1/Safety/FatalOccupationalInjuries</p>
+
+<p>Allows users to search nonfatal and fatal data for the nation and for States from the most current Survey of Occupational Injuries and Illnesses and the Census of Fatal Occupational Injuries programs. Users can search by industry, demographic characteristics, and case characteristics. Historical data for years prior to the current year. More information and details about the data provided can be found at http://www.bls.gov/data/#injuries.</p>
+<h3 id='dol-osha-enforcement-api'>DOL OSHA Enforcement API</h3>
+<p>The dataset consists of inspection case detail for approximately 90,000 OSHA inspections conducted annually. The dataset includes information regarding the impetus for conducting the inspection, and details on citations and penalty assessments resulting from violations of OSHA standards. Additionally, accident investigation information is provided, including textual descriptions of the accident, and details regarding the injuries and fatalities which occurred. For more information refer to: www.osha.gov.</p>
+
+<p>View OSHA&#39;s metric codes on the &#39;Data Enforcement&#39; page under &#39;OSHA Enforcement Data&#39; or Downloaded.</p>
+
+<p>The following datasets use offset for pagination so you can gather more than the limit of 200 records. For more detailed information read about the how to use our offset under the &quot;data.dol.gov&quot; tab.</p>
+<h3 id='auto-workers-api'>Auto Workers API</h3>
+<p>http://api.dol.gov/V1/AutoWorkers</p>
+
+<p>This dataset tells you Auto Companies which are closed or repurposed in the last couple of decades. It also shows you how successful or bad the closure process or the repurpose process is and in which state and city these companies found.</p>
+<h3 id='safety-and-health-api'>Safety and Health API</h3>
+<p>http://api.dol.gov/V1/SafetyHealth</p>
+
+<p>Data related to safety and health in the workplace.</p>
+<h3 id='full-mine-information-mines-api'>Full Mine Information Mines API</h3>
+<p>http://api.dol.gov/V1/Mining/FullMineInfo/</p>
+
+<p>The Full Mine Info dataset lists all Coal and Metal/Non-Metal mines under MSHA&#39;s jurisdiction since 1/1/1970. It includes such information as the current status of each mine (Active, Abandoned, NonProducing, etc.), the current owner and operating company, commodity codes and physical attributes of the mine. Mine ID is the unique key for this data.</p>
+<h3 id='basic-mine-information-api'>Basic Mine Information API</h3>
+<p>http://api.dol.gov/V1/Mining/BasicMineInfo</p>
+
+<p>The Basic Mine Info dataset lists basic information on all Coal and Metal/Non-Metal mines under MSHA&#39;s jurisdiction since 1/1/1970. It includes such information as the current status of each mine (Active, Abandoned, NonProducing, etc.), the current owner and operating company, commodity codes and physical attributes of the mine.</p>
+
+<p>Note: This dataset used to be &quot;Address of record&quot;. The name was changed due to content organization so did the location.</p>
+
+<p>This complete dataset can be found at https://catalog.data.gov/dataset/basic-mine-information-mine-address-of-record</p>
+<h3 id='mine-accident-injuries-api'>Mine Accident Injuries API</h3>
+<p>http://api.dol.gov/V1/Safety/Accidents</p>
+
+<p>This dataset contains information on all accidents, injuries and illnesses reported by mine operators and contractors beginning with 1983. The data in the table is obtained from the Mine Accident, Injury and Illness Report form (MSHA Form 7000-1). Document number is the unique key for this data. It provides information about the accident/injury/illness such as type, mine location, lost days and the degree of injury.</p>
+
+<p>This complete dataset can be found at https://catalog.data.gov/dataset/mine-accident-injuries</p>
+<h3 id='osha-compliance-api'>OSHA Compliance API</h3>
+<p>http://api.dol.gov/V1/Compliance/OSHA</p>
+
+<p>The dataset consists of inspection case detail for approximately 100,000 OSHA inspections conducted annually. The dataset includes information regarding the impetus for conducting the inspection, and details on citations and penalty assessments resulting from violations of OSHA standards.More information and details about the data provided can be found at http://www.osha.gov</p>
+
+<p>This complete dataset can be found on the DOL Data Enforcement application at http://enforcedata.dol.gov</p>
+<h3 id='mine-inspections-api'>Mine Inspections API</h3>
+<p>http://api.dol.gov/V1/Compliance/MineInspection</p>
+
+<p>The Mine Inspections dataset lists every mine inspection conducted by MSHA dating back to 1/1/1978. The data includes the name of the mine inspected, MSHA&#39;s internal inspection number (event number), the type of inspection and the start and end dates of the inspection. Event Number is the unique key for this dataset. It also includes the Mine ID associated with the inspections which can be used to relate it to the Mines Data Set.</p>
+
+<p>This complete dataset can be found at https://explore.data.gov/Energy-and-Utilities/Mine-Inspections/wt25-mkey</p>
+<h2 id='wage-amp-hours'>Wage &amp; hours</h2>
+<p>Farm Labor Contractor and Farm Labor Contractor Employee API</p>
+
+<p>Wage and Hour Publications System API</p>
+
+<p>WHD Compliance API</p>
+<h2 id='expanding-growth-br-opportunities-amp-learning'>Expanding Growth<br>Opportunities &amp; Learning</h2>
+<p>Public Workforce System API</p>
+
+<p>OUI Initial Claims API</p>
+
+<p>IPIA API</p>
+
+<p>Quarterly Census Employment and Wage (CEW) API</p>
+
+<p>Occupational Employment Statistics Survey (OES) API</p>
+
+<p>Current Population Survey (CPS) API</p>
+
+<p>Current Employment Statistics (CES) API</p>
+
+<p>Consumer Price Indexes (CPI) API</p>
+
+<p>2010 Workforce Investment Act API</p>
+
+<p>2010 Occupational Employment Statistics API</p>
+
+<p>BLS Numbers API</p>
+<h2 id='other-datasets'>Other Datasets</h2>
+<p>Sweat &amp; Toil API</p>
+
+<p>VETS4212 API</p>
+
+<p>VETS100 API</p>
+
+<p>API Metrics (per key) API</p>
+
+<p>Research And Evaluation Inventory API</p>
+
+<p>Geography API</p>
+
+<p>Form API</p>
+
+<p>Frequently Asked Questions (FAQ) API</p>
+
+<p>API Metadata API</p>
+
+<p>Agency API</p>
+<h1 id='example'>Example</h1><h1 id='support'>Support</h1><h1 id='api-notifications'>API Notifications</h1>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
                 <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
