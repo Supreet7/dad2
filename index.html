@@ -242,11 +242,7 @@
     </a>
     <div class="toc-wrapper">
       <div class="logo-holder">
-        <a href="/">
-          <span class="brand"></span>
-          <h1 class="header-logo-type">DEVELOPER PORTAL<br/>
-          UNITED STATES DEPARTMENT OF LABOR</h1>
-        </a>
+            <a href="/"> <span class="brand"></span><h1 class="header-logo-type">DEVELOPER PORTAL<br/> UNITED STATES DEPARTMENT OF LABOR</h1> </a>
       </div>
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
@@ -477,17 +473,17 @@ https://data.dol.gov/get/inspection/format/xml
 
 <p>The Injuries, Illnesses, and Fatalities (IIF) program provides annual information on the rate and number of work related injuries, illnesses, and fatal injuries, and how these statistics vary by incident, industry, geography, occupation, and other characteristics. More information and details about the data provided can be found at http://www.bls.gov/data/#injuries.</p>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.dol.gov/V1/Safety/InjuriesAndIllness/?KEY=YOUR_API_KEY"</span> -H <span class="s2">"Accept: application/json"</span>
-</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"d"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"EntitySets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"II_AREA"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"II_CASE_TYPE"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"II_DATA_PUB"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"II_DATA_TYPE"</span><span class="p">,</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='gulf-oil-spill-api'>Gulf Oil Spill API</h3>
+</code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"d"</span>: <span class="o">{</span>
+        <span class="s2">"EntitySets"</span>: <span class="o">[</span>
+            <span class="s2">"II_AREA"</span>,
+            <span class="s2">"II_CASE_TYPE"</span>,
+            <span class="s2">"II_DATA_PUB"</span>,
+            <span class="s2">"II_DATA_TYPE"</span>,
+        <span class="o">]</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><h3 id='gulf-oil-spill-api'>Gulf Oil Spill API</h3>
 <p>http://api.dol.gov/V1/Safety/GulfOilSpill</p>
 
 <p>Following its sampling plan, OSHA industrial hygienists are monitoring workers engaged in the oil spill clean up in the Gulf of Mexico for exposure to hazardous chemicals and conditions. These data tables provide sample results for chemicals, noise, and heat stress index measurements. Samples to assess airborne concentrations of oil, weathered oil, oil dispersants, cleaning agents and other materials as identified are taken. When evaluating worker exposure, direct reading instruments and shift-long sampling is performed in the actual breathing zone of workers. OSHA has also sampled areas that are periodically frequented by workers but the samples are not taken from the breathing zone of workers. Finally, OSHA has sampled directly over tar balls, inside bags containing contaminated materials, and other locations that do not represent worker exposure but provide information on the types of chemicals that may be coming off contaminated materials.</p>
@@ -608,5 +604,61 @@ https://data.dol.gov/get/inspection/format/xml
           </div>
       </div>
     </div>
+    <footer class="site-footer">
+      <div role="contentinfo">
+        <div class="row footer-one">
+          <div class="small-12 large-4 columns ">
+              <a href='https://www.dol.gov/'><img src='img/dol-logo-white.png' alt='U.S.Department of Labor'/> <span class='header-logo-type-white'>UNITED STATES<br>DEPARTMENT OF LABOR</span></a>
+          </div>
+          <div class="small-12 large-4 columns">
+            &nbsp;
+          </div>
+          <div class="small-12 large-4 columns">
+            <div class="center-block">
+              <div class="social-block-btm">
+                  <a href='http://www.facebook.com/departmentoflabor' class='sm-facebook'>Facebook</a>
+                  <a href='https://twitter.com/usdol' class='sm-twitter'>Twitter</a>
+                  <a href='https://www.instagram.com/USDOL/' class='sm-instagram'>DOL Instagram</a>
+                  <a href='https://plus.google.com/+USDOL/posts' class='sm-gplus'>Google Plus</a>
+                  <a href='https://www.dol.gov/rss' class='sm-rss-btm'>RSS</a>
+                  <a href="javascript:window.open('https://public.govdelivery.com/accounts/USDOL/subscriber/new','Popup','width=800,height=500,toolbar=no,scrollbars=yes,resizable=yes'); void('');" ONCLICK="window.status='Subscribe'; return true" ONMOUSEOVER="window.status='Subscribe'; return true" ONMOUSEOUT="window.status=''; return true" class='sm-email-btm'>Email</a>
+              </div>
+            </div> 
+          </div>
+        </div>
+
+        <div class="row footer-two">
+          <div class="small-12 large-4 columns">
+              <p>200 Constitution Ave. NW<br> Washington DC 20210<br> <a href='tel:1-866-487-2365'>1-866-4-USA-DOL</a><br> <a href='tel:1-866-487-2365'>1-866-487-2365</a><br> <a href='https://www.dol.gov/general/contact-phonecallcenter'>TTY</a><br> <a href='http://www.dol.gov/'>www.dol.gov </a></p>
+          </div>
+          <div class="small-12 large-4 columns">
+            <div class="center-block">
+              <p><strong>ABOUT THE SITE</strong></p>
+              <ul role="navigation">
+                  <li><li><a href="https://www.dol.gov/general/foia">Freedom of Information Act</a></li></li>
+                  <li><li><a href="https://www.dol.gov/general/privacynotice">Privacy &amp; Security Statement</a></li></li>
+                  <li><li><a href="https://www.dol.gov/general/disclaim">Disclaimers</a></li></li>
+                  <li><li><a href="https://www.dol.gov/general/aboutdol/website-policies">Important Web Site Notices</a></li></li>
+                  <li><li><a href="https://www.dol.gov/general/aboutdol/plug-ins">Plug-ins Used by DOL</a></li></li>
+                  <li><li><a href="https://www.dol.gov/rss">RSS Feeds from DOL</a></li></li>
+                  <li><li><a href=" https://www.dol.gov/general/aboutdol/accessibility">Accessibility Statement</a></li></li>
+              </ul>              
+            </div>  
+          </div>
+          <div class="small-12 large-4 columns end">
+            <div class="center-block">
+              <p><strong>DEVELOPER</strong></p>
+              <ul role="navigation">
+                  <li><li><a href="https://opendata.stackexchange.com/questions/ask?tags=labor">Ask Questions</a></li></li>
+                  <li><li><a href="https://github.com/USDepartmentofLabor/DOLAPI/issues/new">Report Bugs</a></li></li>
+                  <li><li><a href="/terms-of-service">Terms of Service</a></li></li>
+                  <li><li><a href="https://github.com/USDepartmentofLabor">Fork this site on Github</a></li></li>
+                  <li><li><a href="/release-notes">Changelog</a></li></li>
+              </ul>                  
+             </div> 
+          </div>
+        </div>
+      </div>
+    </footer>    
   </body>
 </html>
