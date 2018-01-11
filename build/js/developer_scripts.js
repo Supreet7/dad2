@@ -1,0 +1,1 @@
+function getAppStoreLink(){var t=navigator.userAgent||navigator.vendor||window.opera;return t.match(/iPad/i)||t.match(/iPhone/i)||t.match(/iPod/i)?"itms-apps://itunes.apple.com/us/app/labor-stats/id468085481?mt=8":t.match(/Android/i)?"market://details?id=com.current":"https://github.com/USDepartmentofLabor?query=stats"}
