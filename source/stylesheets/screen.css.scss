@@ -267,6 +267,7 @@ html, body {
   z-index: 10;
   background-color: $main-bg;
   min-height: 100%;
+  overflow: hidden;
 
   padding-bottom: 1px; // prevent margin overflow
 

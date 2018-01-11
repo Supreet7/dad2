@@ -5,8 +5,41 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
   - ruby
 
+toc_brand:
+  - <a href="/"> <span class="brand"></span><h1 class="header-logo-type">DEVELOPER PORTAL<br/> UNITED STATES DEPARTMENT OF LABOR</h1> </a>
+
 toc_footers:
   - <a href='https://devtools.dol.gov/developer'>DOL Public API</a>
+
+toc_logo_footers:
+  - <a href='https://www.dol.gov/'><img src='/img/dol-logo-white.png' alt='U.S.Department of Labor'/> <span class='header-logo-type-white'>UNITED STATES<br>DEPARTMENT OF LABOR</span></a>
+
+toc_social_footers:
+  - <a href='http://www.facebook.com/departmentoflabor' class='sm-facebook'>Facebook</a>
+  - <a href='https://twitter.com/usdol' class='sm-twitter'>Twitter</a>
+  - <a href='https://www.instagram.com/USDOL/' class='sm-instagram'>DOL Instagram</a>
+  - <a href='https://plus.google.com/+USDOL/posts' class='sm-gplus'>Google Plus</a>
+  - <a href='https://www.dol.gov/rss' class='sm-rss-btm'>RSS</a>
+  - <a href="javascript:window.open('https://public.govdelivery.com/accounts/USDOL/subscriber/new','Popup','width=800,height=500,toolbar=no,scrollbars=yes,resizable=yes'); void('');" ONCLICK="window.status='Subscribe'; return true" ONMOUSEOVER="window.status='Subscribe'; return true" ONMOUSEOUT="window.status=''; return true" class='sm-email-btm'>Email</a>        
+
+toc_location_footers:
+  - <p>200 Constitution Ave. NW<br> Washington DC 20210<br> <a href='tel:1-866-487-2365'>1-866-4-USA-DOL</a><br> <a href='tel:1-866-487-2365'>1-866-487-2365</a><br> <a href='https://www.dol.gov/general/contact-phonecallcenter'>TTY</a><br> <a href='http://www.dol.gov/'>www.dol.gov </a></p>
+
+toc_about_footers:
+  - <li><a href="https://www.dol.gov/general/foia">Freedom of Information Act</a></li>
+  - <li><a href="https://www.dol.gov/general/privacynotice">Privacy &amp; Security Statement</a></li>
+  - <li><a href="https://www.dol.gov/general/disclaim">Disclaimers</a></li>
+  - <li><a href="https://www.dol.gov/general/aboutdol/website-policies">Important Web Site Notices</a></li>
+  - <li><a href="https://www.dol.gov/general/aboutdol/plug-ins">Plug-ins Used by DOL</a></li>
+  - <li><a href="https://www.dol.gov/rss">RSS Feeds from DOL</a></li>
+  - <li><a href=" https://www.dol.gov/general/aboutdol/accessibility">Accessibility Statement</a></li>
+
+toc_developer_footers:
+  - <li><a href="https://opendata.stackexchange.com/questions/ask?tags=labor">Ask Questions</a></li>
+  - <li><a href="https://github.com/USDepartmentofLabor/DOLAPI/issues/new">Report Bugs</a></li>
+  - <li><a href="/terms-of-service">Terms of Service</a></li>
+  - <li><a href="https://github.com/USDepartmentofLabor">Fork this site on Github</a></li>
+  - <li><a href="/release-notes">Changelog</a></li>
 
 includes:
   - ErrorMessage

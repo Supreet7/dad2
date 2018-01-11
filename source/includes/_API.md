@@ -8,7 +8,7 @@ The Injuries, Illnesses, and Fatalities (IIF) program provides annual informatio
 ```shell
 curl "https://api.dol.gov/V1/Safety/InjuriesAndIllness/?KEY=YOUR_API_KEY" -H "Accept: application/json"
 ```
-```json
+```shell
 {
     "d": {
         "EntitySets": [
