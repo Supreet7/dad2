@@ -53,7 +53,7 @@ html, body {
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
-  z-index: 30;
+  z-index: 75;
   top: 0;
   left: 0;
   bottom: 0;
@@ -349,6 +349,9 @@ html, body {
 
     @extend %left-col;
   }
+  &>table {
+    padding: 0;
+  }
 
   &>ul, &>ol {
     padding-left: $main-padding + 15px;
@@ -427,13 +430,13 @@ html, body {
     }
 
     th {
-      padding: 5px 10px;
+      padding: 5px 28px;
       border-bottom: 1px solid #ccc;
       vertical-align: bottom;
     }
 
     td {
-      padding: 10px;
+      padding: 28px;
     }
 
     tr:last-child {
@@ -559,6 +562,8 @@ html, body {
     padding-top: 2em;
     padding-bottom: 2em;
     padding: 2em $main-padding;
+    position: absolute;
+    right:0;
   }
 
   blockquote {

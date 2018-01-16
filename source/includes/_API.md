@@ -1,14 +1,10 @@
 # API
 ## Health & Safety
 ###Injuries And Illness API
-http://api.dol.gov/V1/Safety/InjuriesAndIllness
-
-The Injuries, Illnesses, and Fatalities (IIF) program provides annual information on the rate and number of work related injuries, illnesses, and fatal injuries, and how these statistics vary by incident, industry, geography, occupation, and other characteristics. More information and details about the data provided can be found at http://www.bls.gov/data/#injuries.
 
 ```shell
 curl "https://api.dol.gov/V1/Safety/InjuriesAndIllness/?KEY=YOUR_API_KEY" -H "Accept: application/json"
-```
-```shell
+
 {
     "d": {
         "EntitySets": [
@@ -16,10 +12,167 @@ curl "https://api.dol.gov/V1/Safety/InjuriesAndIllness/?KEY=YOUR_API_KEY" -H "Ac
             "II_CASE_TYPE",
             "II_DATA_PUB",
             "II_DATA_TYPE",
+            ...
         ]
     }
 }
 ```
+
+http://api.dol.gov/V1/Safety/InjuriesAndIllness
+
+The Injuries, Illnesses, and Fatalities (IIF) program provides annual information on the rate and number of work related injuries, illnesses, and fatal injuries, and how these statistics vary by incident, industry, geography, occupation, and other characteristics. More information and details about the data provided can be found at http://www.bls.gov/data/#injuries.
+
+#### Dataset Tables
+
+##### II_AREA Table
+
+Area 
+
+| Column Name               | Data Type               | Column Description                                                                                                                                                                                                                   |  
+| ------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |  
+| Column Name AREA_CODE     | Data Type varchar (3)   | Column Description Unique code used to identify a specific geographic region. Choose combination of ownership (all, private, state, local, or state and local) and state . See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.area. |  
+| Column Name AREA_NAME     | Data Type varchar (100) | Column Description Describes the specific geographic region. Choose combination of ownership (all, private, state, local, or state and local) and state . See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.area.                  |  
+| Column Name DISPLAY_LEVEL | Data type varchar (2)   | Coloumn Description A hierarchy of various levels. A proprietary nesting scheme.                                                                                                                                                     |  
+| Column Name SELECTABLE    | Data Type varchar (1)   | Column Description A permission to choose (T) a variable in which reasonable data is assured.                                                                                                                                        |  
+| Column Name SORT_SEQUENCE | Data Type  varchar (5)  | Column Description Order in which variables are displayed.                                                                                                                                                                           |  
+
+##### II_CASE_TYPE Table
+
+Case Type 
+
+| Column Name                | Data Type              | Column Description                                                                                                                                                                                                                                                                                                                                                                                                                                |  
+| -------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name CASE_TYPE_CODE | Data Type Varchar (1)  | Column Description The code identifies the type of case for which data are available. Choose total recordable cases (all, poisoning, skin disease, hearing loss, respiratory illness, or all other) or involving days away from work, days of job transfer and restriction, or all three. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.case_type. Definitions for days away from work, job transfer, and job restriction are listed below. |  
+| Column Name CASE_TYPE_TEXT | Data Type Varchar(100) | Column Description Describes case for which data are available. Choose total recordable cases (all, poisoning, skin disease, hearing loss, respiratory illness, or all other) or involving days away from work, days of job transfer and restriction, or all three. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.case_type. Definitions for days away from work, job transfer, and job restriction are listed below.                       |  
+
+##### II_DATA_PUB Table
+
+Data Pub 
+
+| Column Name                | Data Type              | Column Description                                                                                                          |  
+| -------------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name SERIES_ID      | Data Type Varchar (17) | Column Description Code identifying the specific series. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.data.1.AllData |  
+| Column Name YEAR           | Data type Varchar(4)   | Column Description Identifies year of observation between 2003-2010 for every Series ID                                     |  
+| Column Name PERIOD         | Data Type Varchar(3)   | Column Description Identifies the period of the observation (annual, monthly, quarterly).                                   |  
+| Column Name VALUE          | Data Type Varchar(12)  | Column Decscription Data values for series.                                                                                 |  
+| Column Name FOOTNOTE_CODES | Data Type Varchar(10)  | Column Description Identifies footnote for the data series.                                                                 |  
+
+##### II_DATA_TYPE Table
+
+Data Type 
+
+| Column Name                | Data Type              | Column Description                                                                                                                                                                                                |  
+| -------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name DATA_TYPE_CODE | Data Type Varchar (1)  | Column Description Code identifying the datatype of the observation. Choose rate or number of illness or injury cases or illness and injury cases. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.data_type. |  
+| Column Name DATA_TYPE_TEXT | Data Type Varchar(100) | Column Descrition Describes the datatype of the observation. Choose rate or number of illness or injury cases or illness and injury cases. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.data_type.         |  
+
+Footnote 
+
+| Column Name               | Data Type              | Column Description                                                                                                        |  
+| ------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name FOOTNOTE_CODE | Data Type Varchar (1)  | Column Description Identifies footnote for the data series. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.footnote. |  
+| Column Name FOOTNOTE_TEXT | Data Type Varchar(100) | Column Description Contains the text of the footnote. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.footnote        |  
+
+##### II_GQT_CASE Table
+
+GQT Case 
+
+| Column Name                       | Data Type              | Coloumn Description                                                                                                                                                                                                                                                                                                                                                                                                                                |  
+| --------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name GQT_CASE_COMPONENT    | Data Type Varchar (3)  | Column Description Abbreviations for type of case component (industry, occupation, source, event, occupation).                                                                                                                                                                                                                                                                                                                                     |  
+| Column Name GQT_CASE_CODE         | Data Type Varchar(1)   | Column Description The code identifies the type of case for which data are available. Choose total recordable cases (all, poisoning, skin disease, hearing loss, respiratory illeness, or all other) or involving days away from work, days of job transfer and restriction, or all three. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.case_type. Definitions for days away from work, job transfer, and job restriction are listed below. |  
+| Column Name GQT_CASE_TEXT         | Data Type Varchar (50) | Column Description Describes case for which data are available. Choose total recordable cases (all, poisoning, skin disease, hearing loss, respiratory illeness, or all other) or involving days away from work, days of job transfer and restriction, or all three. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.case_type. Definitions for days away from work, job transfer, and job restriction are listed below.                       |  
+| Column Name GQT_CASE_TABLE_NAME   | Data type Varchar(50)  | Column Description Describes the database tables to reference for the application based on code and component.                                                                                                                                                                                                                                                                                                                                     |  
+| Column Name GQT_CASE_COLUMN_NAMES | Data Type Varchar (50) | Column Description Describes the table columns to display from the CASE_TABLE_NAME.                                                                                                                                                                                                                                                                                                                                                                |  
+| Column Name GQT_CASE_TITLE        | Data Type Varchar(50)  | Column Description Contains the generic case selection.                                                                                                                                                                                                                                                                                                                                                                                            |  
+| Column Name GQT_ORDER             | Data Type Varchar (20) | Column Description Order in which variables are displayed.                                                                                                                                                                                                                                                                                                                                                                                         |  
+| Column Name GQT_DISPLAY           | Data Type Int 64       | Column Description Whether CASE_CODE is displayed or not.                                                                                                                                                                                                                                                                                                                                                                                          |  
+| Column Name GQT_CODE_DISPLAY      | Data Type Int 64       | Column Description Code Display.                                                                                                                                                                                                                                                                                                                                                                                                                   |  
+
+##### II_GQT_CHAR Table
+
+GQT Character 
+
+| Column Name                    | Data Type             | Column Description                                                                                                                                                                                                                                                                                                                                        |  
+| ------------------------------ | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name GQT_REPORT_ID      | Data Type Varchar (1) | Column Description Describes to the application the Report format to display selected information.                                                                                                                                                                                                                                                        |  
+| Column Name GQT_CASE_CODE      | Data Type Varchar(1)  | Column Description The code identifies the type of case for which data are available. Choose total recordable cases (all, poisoning, skin disease, hearing loss, respiratory illeness, or all other) or involving days away from work, days of job transfer and restriction, or all three. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.case_type. |  
+| Column Name GQT_CASE_COMPONENT | Data Type Varchar (3) | Column Description Abbreviations for type of case component.                                                                                                                                                                                                                                                                                              |  
+
+##### II_GQT_OWNERSHIP Table
+
+GQT Ownership 
+
+| Column Name                | Data Type             | Column Description                                                                                                       |  
+| -------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |  
+| Column Name OWNERSHIP_CODE | Data Type Varchar (1) | Column Description Unique code used to identify a specific ownership type (private, state government, local government). |  
+| Column Name OWNERSHIP_NAME | Data Type Varchar(50) | Column Description Describes the ownership type for the observation (private, state government, local government, all).  |  
+| Column Name SORT_SEQUENCE  | Data Type Varchar (5) | Column Description Display order of ownership for application.                                                           |  
+
+##### II_GQT_STATE Table
+
+GQT State 
+
+| Column Name               | Data Type             | Column Description                                                                                 |  
+| ------------------------- | --------------------- | -------------------------------------------------------------------------------------------------- |  
+| Column Name STATE_CODE    | Data Type Varchar (2) | Column Description Unique code used to identify the state or area associated with the observation. |  
+| Column Name STATE_NAME    | Data Type Varchar(50) | Column Description State or area name associated with the observation.                             |  
+| Column Name SORT_SEQUENCE | Data Type Varchar (5) | Column Description Order in which variables are displayed.                                         |  
+
+##### II_GQT_STATE_OWNERSHIP Table
+
+GQT State Ownership 
+
+| Column Name                | Data Type             | Column Description                                                                                                       |  
+| -------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |  
+| Column Name YEAR           | Data Type Varchar (4) | Column Description Identifies year of observation between 2003-2010 for every Series ID.                                 |  
+| Column Name OWNERSHIP_CODE | Data Type             | Column Description Unique code used to identify a specific ownership type (private, state government, local government). |  
+| Column Name STATE_CODE     | Data Type Varchar(3)  | Column Description Unique code used to identify the state or area associated with the observation.                       |  
+| Column Name STATE_NAME     | Data Type Varchar(50) | Column Description State or area name associated with the observation.                                                   |  
+| Column Name SORT_SEQUENCE  | Data Type Varchar (5) | Column Description Order in which variables are displayed.                                                               |  
+
+##### II_INDUSTRY Table
+
+Industry 
+
+| Column Name                  | Data Type               | Column Description                                                                                                                                                                                                                                                                                                                  |  
+| ---------------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name SUPERSECTOR_CODE | Data Type Varchar (3)   | Column Description Unique code use to identify the supersectors (Cobstruction, Education & Health Services, Financial Activities, Information, Leisure & Hospitality, Manufacturing, Natural Resources & Mining, Trade Transportation & Utilities, or Professional & Business Services). Definition of supersector is provided below.|  
+| Column Name INDUSTRY_CODE    | Data Type Varchar(6)    | Column Description The code identifies the industry for which data are observed. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.industry. See industry definition below.                                                                                                                                                       |  
+| Column Name INDUSTRY_NAME    | Data Type Varchar (100) | Column Description Describes the industry for which data are observed. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.industry. See industry definition below.                                                                                                                                                                 |  
+| Column Name DISPLAY_LEVEL    | Data Type Varchar (2)   | Column Description A hierarchy of various levels. A proprietary nesting scheme.                                                                                                                                                                                                                                                     |  
+| Column Name SELECTABLE       | Data Type Varchar(1)    | Column Description A permission to choose (T) a variable in which reasonable data is assured.                                                                                                                                                                                                                                       |  
+| Column Name SORT_SEQUENCE    | Data Type Varchar (5)   | Column Description Order in which variables are displayed.                                                                                                                                                                                                                                                                          |  
+
+##### II_SERIES Table
+
+Series 
+
+| Column Name                  | Data Type              | Column Description                                                                                                                                                                                                                                                                                                                                                                                                                                 |  
+| ---------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name SERIES_ID        | Data Type Varchar (17) | Column Description Code identifying the specific series. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.series.                                                                                                                                                                                                                                                                                                                               |  
+| Column Name SUPERSECTOR_CODE | Data Type Varchar (3)  | Column Description Unique code use to identify the supersectors (Cobstruction, Education & Health Services, Financial Activities, Information, Leisure & Hospitality, Manufacturing, Natural Resources & Mining, Trade Transportation & Utilities, or Professional & Business Services). Definition of supersector is provided below.                                                                                                              |  
+| Column Name INDUSTRY_CODE    | Data Type Varchar(6)   | Column Description The code identifies the industry for which data are observed. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.industry. See industry definition below.                                                                                                                                                                                                                                                                      |  
+| Column Name DATA_TYPE_CODE   | Data Type Varchar (1)  | Column Description Code identifying the datatype of the observation. Choose rate or number of illness or injury cases or illness and injury cases. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.data_type.                                                                                                                                                                                                                                  |  
+| Column Name CASE_TYPE_CODE   | Data Type Varchar (1)  | Column Description The code identifies the type of case for which data are available. Choose total recordable cases (all, poisoning, skin disease, hearing loss, respiratory illeness, or all other) or involving days away from work, days of job transfer and restriction, or all three. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.case_type. Definitions for days away from work, job transfer, and job restriction are listed below. |  
+| Column Name AREA_CODE        | Data Type Varchar(3)   | Column Description Unique code used to identify a specific geographic region. Choose combination of ownership (all, private, state, local, or state and local) and state . See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.area.                                                                                                                                                                                                               |  
+| Column Name FOOTNOTE_CODES   | Data Type Varchar (10) | Column Description Identifies footnote for the data series. See list at ftp://ftp.bls.gov/pub/time.series/ii/ii.footnote.                                                                                                                                                                                                                                                                                                                          |  
+| Column Name BEGIN_YEAR       | Data Type Varchar(4)   | Column Description Identifies first year for which data are available (2003-2008).                                                                                                                                                                                                                                                                                                                                                                 |  
+| Column Name BEGIN_PERIOD     | Data Type Varchar(3)   | Column Description Identifies first data observation within the first year for which data are available.                                                                                                                                                                                                                                                                                                                                           |  
+| Column Name END_YEAR         | Data Type Varchar (4)  | Column Description Identifies last year for which data are available (2005-2010).                                                                                                                                                                                                                                                                                                                                                                  |  
+| Column Name END_PERIOD       | Data Type Varchar (3)  | Column Description Varchar (3)Identifies last data observation within the first year for which data are available.                                                                                                                                                                                                                                                                                                                                 |  
+
+##### II_SUPERSECTOR Table
+
+Supersector 
+
+| Column Name                  | Data Type               | Column Description                                                                                                                                                                                                                                                                                                                  |  
+| ---------------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Column Name SUPERSECTOR_CODE | Data Type Varchar (3)   | Column Description Unique code use to identify the supersectors (Cobstruction, Education & Health Services, Financial Activities, Information, Leisure & Hospitality, Manufacturing, Natural Resources & Mining, Trade Transportation & Utilities, or Professional & Business Services). Definition of supersector is provided below.|  
+| Column Name SUPERSECTOR_NAME | Data Type Varchar (100) | Column Description Name identifying the type of supersector (Cobstruction, Education & Health Services, Financial Activities, Information, Leisure & Hospitality, Manufacturing, Natural Resources & Mining, Trade Transportation & Utilities, or Professional & Business Services). Definition of supersector is provided below.   |  
+| Column Name DISPLAY_LEVEL    | Data Type Varchar (2)   | Column Description A hierarchy of various levels. A proprietary nesting scheme.                                                                                                                                                                                                                                                     |  
+| Column Name SELECTABLE       | Data Type Varchar(1)    | Column Description A permission to choose (T) a variable in which reasonable data is assured.                                                                                                                                                                                                                                       |  
+| Column Name SORT_SEQUENCE    | Data Type Varchar (5)   | Column Description Order in which variables are displayed.                                                                                                                                                                                                                                                                          |  
 
 ###Gulf Oil Spill API
 http://api.dol.gov/V1/Safety/GulfOilSpill
