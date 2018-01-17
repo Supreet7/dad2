@@ -426,6 +426,12 @@ footer {
 	margin-bottom: 10px;
 }
 
+@media (min-width: 930px) {
+	footer {
+		margin-left: 230px;
+	}
+}
+
 @media (min-width: 768px) and (max-width: 980px) {
  .slide-caption {
  padding: 10px 5px 0 5px;
