@@ -404,12 +404,12 @@ html, body {
   h3, h4, h5, h6 {
     @extend %header-font;
     font-size: 15px;
-    margin-top: 2.5em;
     margin-bottom: 0.8em;
   }
 
   h4, h5, h6 {
-    font-size: 10px;
+    margin-top: 1em;
+    font-size: 14px;
   }
 
   hr {
@@ -421,6 +421,7 @@ html, body {
   table {
     margin-bottom: 1em;
     overflow: auto;
+    border: 0;
     th,td {
       text-align: left;
       vertical-align: top;
@@ -431,25 +432,37 @@ html, body {
     }
 
     th {
-      padding: 5px 28px;
-      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      border-bottom: 1px  solid #1E2224;
+      background: #1E2224;
+      color: #fff;
       vertical-align: bottom;
     }
 
     td {
-      padding: 10px 28px;
+      padding: 10px 10px;
     }
+
+    th:first-child, tr:first-child {
+    padding-left: 28px;
+
+    }
+
+    th:first-child, tr:first-child {
+    padding-right: 28px;
+    }
+
 
     tr:last-child {
       border-bottom: 1px solid #ccc;
     }
 
     tr:nth-child(odd)>td {
-      background-color: lighten($main-bg,4.2%);
+      background-color: lighten($main-bg,3%);
     }
 
     tr:nth-child(even)>td {
-      background-color: lighten($main-bg,2.4%);
+      background-color: lighten($main-bg,1%);
     }
   }
 
